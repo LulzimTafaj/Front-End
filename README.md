@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Todo App Frontend
 
-## Getting Started
+This is the **frontend** for the Todo App, built with **Next.js 15**, **React 19**, and **Tailwind CSS 4**.  
+It communicates with the backend API (Express + Prisma + MySQL) to manage tasks.
 
-First, run the development server:
+---
 
+## 🚀 Getting Started
+
+### 1. Prerequisites
+Make sure you have installed:
+
+- [Node.js](https://nodejs.org/) (v18+ recommended)  
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)  
+- Backend API running (default: [http://localhost:4000](http://localhost:4000))
+
+---
+
+### 2. Clone the Repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/LulzimTafaj/Front-End.git
+cd front-end
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Install Dependencies
+```bash
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+### 4. Configure Environment Variables
+Create a `.env` file in the project root based on the `.env.example` template and add:
 
-To learn more about Next.js, take a look at the following resources:
+```env
+NEXT_PUBLIC_API_URL=http://localhost:4000
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `NEXT_PUBLIC_API_URL`: Base URL of your backend API.  
+  (`NEXT_PUBLIC_` prefix is required so it can be accessed in the browser.)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+### 5. Run the Development Server
+```bash
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Frontend will be available at:  
+👉 [http://localhost:3000](http://localhost:3000)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+### 6. Build for Production
+```bash
+npm run build
+npm start
+```
+
+---
+
+### 7. Linting
+```bash
+npm run lint
+```
+
+---
+
+## 📦 Tech Stack
+- **Next.js 15** → React framework  
+- **React 19** → UI library  
+- **Tailwind CSS 4** → Styling  
+- **TypeScript** → Type safety  
+- **ESLint** → Code quality  
+
+---
+
+## 🔗 Connecting to Backend
+The frontend communicates with the backend API defined in `.env`.  
+Make sure the database is set up and that the backend is running on [http://localhost:4000](http://localhost:4000) or update `NEXT_PUBLIC_API_URL` accordingly.
+
+---
+
+## 📄 License
+This project is licensed under the [ISC License](LICENSE).
